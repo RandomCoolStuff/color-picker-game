@@ -1,0 +1,16 @@
+{
+    "gameSettings": {
+        "gridSize": 6,
+        "newGameDelay": 1500,
+        "difficulty": "medium"
+    },
+    "colors": {
+        "primary": "#3498db",
+        "secondary": "#2ecc71",
+        "background": "#ecf0f1"
+    },
+    "messages": {
+        "correct": "Correct! Score: {score}",
+        "wrong": "Wrong! Try again."
+    }
+}
