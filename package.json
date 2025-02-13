@@ -1,0 +1,14 @@
+{
+    "name": "color-picker-challenge",
+    "version": "1.0.0",
+    "description": "A color picker game using TypeScript and Lua",
+    "main": "dist/game.js",
+    "scripts": {
+      "build": "tsc",
+      "start": "tsc --watch"
+    },
+    "devDependencies": {
+      "typescript": "^4.5.4"
+    }
+  }
+  
