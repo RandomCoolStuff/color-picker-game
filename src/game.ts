@@ -73,18 +73,17 @@ class ColorPickerChallenge {
     private handleColorClick(index: number): void {
         this.levelTries++;
         this.totalTries++;
+        localStorage.setItem('totalTries', this.totalTries.toString());
 
         const selectedColor = this.options[index];
         if (this.luaGame.colorsAreEqual(selectedColor, this.targetColor)) {
             this.resultElement.textContent = 'Correct!';
             this.levelsBeaten++;
             localStorage.setItem('levelsBeaten', this.levelsBeaten.toString());
-            localStorage.setItem('totalTries', this.totalTries.toString());
             this.updateScoreboard();
             setTimeout(() => this.startNewGame(), 1500);
         } else {
             this.resultElement.textContent = 'Wrong! Try again.';
-            localStorage.setItem('totalTries', this.totalTries.toString());
             this.updateScoreboard();
         }
     }
