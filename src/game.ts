@@ -32,8 +32,16 @@ class ColorPickerChallenge {
         this.totalTriesElement = document.getElementById('total-tries')!;
 
         // Load persistent stats
-        this.levelsBeaten = parseInt(localStorage.getItem('levelsBeaten') || '0', 10);
-        this.totalTries = parseInt(localStorage.getItem('totalTries') || '0', 10);
+        try {
+            const savedLevelsBeaten = localStorage.getItem('levelsBeaten');
+            const savedTotalTries = localStorage.getItem('totalTries');
+            this.levelsBeaten = savedLevelsBeaten ? parseInt(savedLevelsBeaten, 10) : 0;
+            this.totalTries = savedTotalTries ? parseInt(savedTotalTries, 10) : 0;
+        } catch (e) {
+            console.warn('LocalStorage not available:', e);
+            this.levelsBeaten = 0;
+            this.totalTries = 0;
+        }
 
         // Button event
         this.newGameButton.addEventListener('click', () => this.startNewGame());
