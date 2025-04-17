@@ -59,3 +59,23 @@ main {
 #new-game:hover {
     background-color: var(--secondary-color);
 }
+
+#scoreboard {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+    font-size: 1.1rem;
+    min-width: 180px;
+}
+
+#scoreboard div {
+    font-weight: bold;
+}
